@@ -200,35 +200,18 @@ export default function Edit({ movie, categories }) {
                                     />
                                 </div>
 
-                                <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8 bg-white/[0.02] border border-white/5 rounded-3xl p-6">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <p className="text-sm font-bold uppercase tracking-tight">Premium Kino</p>
-                                            <p className="text-[10px] text-white/20 font-black uppercase tracking-widest mt-1">Ko'rish uchun obuna talab qilinadi</p>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            onClick={() => setData('is_premium', !data.is_premium)}
-                                            className={`h-7 w-12 rounded-full transition-all relative ${data.is_premium ? 'bg-indigo-600' : 'bg-white/10'}`}
-                                        >
-                                            <div className={`absolute top-1 h-5 w-5 rounded-full bg-white transition-all ${data.is_premium ? 'left-6' : 'left-1'}`}></div>
-                                        </button>
+                                <div className="col-span-1 md:col-span-2 bg-white/[0.02] border border-white/5 rounded-3xl p-6 flex items-center justify-between">
+                                    <div>
+                                        <p className="text-sm font-bold uppercase tracking-tight">Premium Kino</p>
+                                        <p className="text-[10px] text-white/20 font-black uppercase tracking-widest mt-1">Ko'rish uchun obuna talab qilinadi</p>
                                     </div>
-
-                                    {data.is_premium && (
-                                        <div className="animate-in fade-in slide-in-from-left-4 duration-300">
-                                            <label className="text-[10px] font-black text-white/40 uppercase tracking-widest mb-2 block ml-1">Narxi (Ixtiyoriy)</label>
-                                            <div className="relative">
-                                                <input
-                                                    type="number"
-                                                    value={data.price}
-                                                    onChange={e => setData('price', e.target.value)}
-                                                    className="w-full bg-white/5 border-white/10 rounded-xl px-4 py-3 text-white font-semibold focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all"
-                                                />
-                                                <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[10px] font-black text-white/20 uppercase tracking-widest pointer-events-none">SO'M</span>
-                                            </div>
-                                        </div>
-                                    )}
+                                    <button
+                                        type="button"
+                                        onClick={() => setData('is_premium', !data.is_premium)}
+                                        className={`h-7 w-12 rounded-full transition-all relative ${data.is_premium ? 'bg-indigo-600' : 'bg-white/10'}`}
+                                    >
+                                        <div className={`absolute top-1 h-5 w-5 rounded-full bg-white transition-all ${data.is_premium ? 'left-6' : 'left-1'}`}></div>
+                                    </button>
                                 </div>
 
                                 <div className="col-span-1 md:col-span-2">

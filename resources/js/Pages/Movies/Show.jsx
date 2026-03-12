@@ -137,9 +137,6 @@ export default function Show({ auth, movie, average_rating, user_rating, can_wat
                                 >
                                     Obunani rasmiylashtirish
                                 </Link>
-                                {movie.price > 0 && (
-                                    <p className="mt-4 text-[10px] font-black uppercase tracking-[0.3em] text-white/20">Ushbu kino narxi: <span className="text-indigo-400">{Number(movie.price).toLocaleString()} UZS</span></p>
-                                )}
                             </div>
                         )}
                     </div>

@@ -41,7 +41,6 @@ class MovieController extends Controller
             'duration' => 'nullable|string',
             'age_limit' => 'nullable|string',
             'is_premium' => 'boolean',
-            'price' => 'nullable|numeric|min:0',
             'poster' => 'nullable|image|max:2048',
             'video_path' => 'required|string', // Path returned from chunk upload
         ]);
@@ -49,7 +48,7 @@ class MovieController extends Controller
         $movieData = $request->only([
             'category_id', 'title', 'description', 'genres', 
             'country', 'year', 'language', 'duration', 'age_limit', 'video_path',
-            'is_premium', 'price'
+            'is_premium'
         ]);
 
         if ($request->hasFile('poster')) {
@@ -114,14 +113,13 @@ class MovieController extends Controller
             'duration' => 'nullable|string',
             'age_limit' => 'nullable|string',
             'is_premium' => 'boolean',
-            'price' => 'nullable|numeric|min:0',
             'poster' => 'nullable|image|max:2048',
         ]);
 
         $movieData = $request->only([
             'category_id', 'title', 'description', 'genres', 
             'country', 'year', 'language', 'duration', 'age_limit',
-            'is_premium', 'price'
+            'is_premium'
         ]);
 
         if ($request->hasFile('poster')) {
